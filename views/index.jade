@@ -1,0 +1,53 @@
+extends ./layout
+
+block content
+    h1="This is a payment service for Lightning."
+    div 
+        h2 Submit payments
+        form(method='post', action='/invoice')
+            p    
+                input(type='radio', name='product', value='{"name" : "Guinness", "price" : ".01"}')
+                label Guinness .01 USD
+            p            
+                input(type='radio', name='product', value='{"name" : "Jameson", "price" : ".05"}')
+                label Jameson .05 USD
+
+
+            p 
+                Billing Details
+            p
+                label Name
+                input(type='text', name='name', placeholder="Name")      
+
+            p
+                label Email
+                input(type='email', name='email', placeholder="Email")          
+                
+            p
+                label Address 1
+                input(type='text', name='address1', placeholder="Address 1")      
+
+            p
+                label Address 2
+                input(type='text', name='address2', placeholder="Address 2")      
+
+            p
+                label Locality
+                input(type='text', name='locaity', placeholder="Locality")      
+
+            p
+                label Region
+                input(type='text', name='region', placeholder="Region")      
+
+            p
+                label Postal Code
+                input(type='text', name='postalCode', placeholder="Postal Code")      
+
+            p
+                label Country
+                input(type='text', name='country', placeholder="Country")      
+
+                    
+
+            p 
+                input(type='submit', name='submit')
